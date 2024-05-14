@@ -1,2 +1,5 @@
 flask 
 yfinance
+scikit-learn
+scipy
+matplotlib
