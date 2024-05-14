@@ -3,3 +3,4 @@ yfinance
 scikit-learn
 scipy
 matplotlib
+plotly
