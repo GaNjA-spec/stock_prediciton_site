@@ -7,15 +7,6 @@ import os
 
 app = Flask(__name__)
 
-common_stock_symbols = {
-    "AAPL": "Apple Inc.",
-    "MSFT": "Microsoft Corporation",
-    "GOOGL": "Alphabet Inc. (Google)",
-    "AMZN": "Amazon.com Inc.",
-    "TSLA": "Tesla, Inc.",
-    # Add more symbols and names as needed
-}
-
 def get_stock_data(symbol, period="1mo"):
     try:
         stock = yf.Ticker(symbol)
@@ -51,7 +42,7 @@ def predict_next_closing_price(data):
 
 @app.route('/')
 def index():
-    return render_template('index.html', symbols=common_stock_symbols)
+    return render_template('index.html')
 
 @app.route('/stock', methods=['POST'])
 def stock():
